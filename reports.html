@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS • Reports</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body data-page="reports" class="theme-light">
+    <header class="global-header glassy">
+        <div class="brand">TMS Studio</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="addtask.html">Add Task</a>
+            <a href="tasklist.html">Task List</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="reports.html" class="active">Reports</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-button" id="notifyButton" aria-label="Notifications">
+                <span class="icon-bell"></span>
+            </button>
+            <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="sun"></span>
+                <span class="moon"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="panel">
+            <div class="panel-header">
+                <div>
+                    <p class="eyebrow">Insights</p>
+                    <h1>Reports</h1>
+                </div>
+                <button class="btn ghost" id="refreshReports">Refresh</button>
+            </div>
+            <div class="stats-grid" id="reportStats">
+                <div class="stat-card">
+                    <p class="label">Total Tasks</p>
+                    <h2 id="totalTasks">0</h2>
+                </div>
+                <div class="stat-card">
+                    <p class="label">Completed</p>
+                    <h2 id="completedTasks">0</h2>
+                </div>
+                <div class="stat-card">
+                    <p class="label">Pending</p>
+                    <h2 id="pendingTasks">0</h2>
+                </div>
+            </div>
+
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Completion Rate</h3>
+                    <div class="bar-chart" id="barChart"></div>
+                </div>
+                <div class="chart-card">
+                    <h3>Priority Mix</h3>
+                    <div class="pie-chart" id="pieChart">
+                        <div class="slice high"></div>
+                        <div class="slice medium"></div>
+                        <div class="slice low"></div>
+                    </div>
+                    <div class="legend">
+                        <span class="dot high"></span>High
+                        <span class="dot medium"></span>Medium
+                        <span class="dot low"></span>Low
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div id="confetti"></div>
+</body>
+</html>

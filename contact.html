@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS • Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body data-page="contact" class="theme-light">
+    <header class="global-header glassy">
+        <div class="brand">TMS Studio</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="addtask.html">Add Task</a>
+            <a href="tasklist.html">Task List</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="reports.html">Reports</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html" class="active">Contact Us</a>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-button" id="notifyButton" aria-label="Notifications">
+                <span class="icon-bell"></span>
+            </button>
+            <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="sun"></span>
+                <span class="moon"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page narrow">
+        <section class="panel">
+            <div class="panel-header">
+                <div>
+                    <p class="eyebrow">Support</p>
+                    <h1>Contact Us</h1>
+                </div>
+                <div class="chip">Always on</div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Reach out</h3>
+                    <p>Email: <a href="mailto:support@tms.studio">support@tms.studio</a></p>
+                    <p>Phone: <a href="tel:+18005551234">+1 800 555 1234</a></p>
+                    <p>Office: 1 Infinite Loop, Cupertino, CA</p>
+                </div>
+                <form id="contactForm" class="form-grid" novalidate>
+                    <label class="field">
+                        <span>Name</span>
+                        <input type="text" name="name" required placeholder="Your name">
+                        <small class="error">Name is required.</small>
+                    </label>
+                    <label class="field">
+                        <span>Email</span>
+                        <input type="email" name="email" required placeholder="you@example.com">
+                        <small class="error">Valid email required.</small>
+                    </label>
+                    <label class="field">
+                        <span>Message</span>
+                        <textarea name="message" rows="4" required placeholder="How can we help?"></textarea>
+                        <small class="error">Message required.</small>
+                    </label>
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary">Send</button>
+                        <button type="reset" class="btn ghost">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div id="confetti"></div>
+</body>
+</html>

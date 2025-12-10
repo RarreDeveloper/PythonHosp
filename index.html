@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS • Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body data-page="home" class="theme-light">
+    <canvas id="particles"></canvas>
+    <header class="global-header glassy">
+        <div class="brand">TMS Studio</div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="addtask.html">Add Task</a>
+            <a href="tasklist.html">Task List</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="reports.html">Reports</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-button" id="notifyButton" aria-label="Notifications">
+                <span class="icon-bell"></span>
+            </button>
+            <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="sun"></span>
+                <span class="moon"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">Minimal. Fluid. Powerful.</p>
+                <h1>Task Management System</h1>
+                <p class="lede">An Apple-inspired workspace that keeps every priority in motion. Glide between pages, capture tasks, explore insights, and finish with confetti.</p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="addtask.html">Start Adding</a>
+                    <a class="btn ghost" href="dashboard.html">View Dashboard</a>
+                </div>
+                <div class="hero-meta">
+                    <div class="meta-card">
+                        <span class="meta-label">Realtime Search</span>
+                        <strong>Lightning-fast filters</strong>
+                    </div>
+                    <div class="meta-card">
+                        <span class="meta-label">Drag & Drop</span>
+                        <strong>Arrange by feel</strong>
+                    </div>
+                    <div class="meta-card">
+                        <span class="meta-label">Dark Mode</span>
+                        <strong>System aware</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="glass-card floating" id="heroPreview">
+                    <div class="card-header">
+                        <div class="pill">Today</div>
+                        <div class="pill neutral">Sprint</div>
+                    </div>
+                    <ul class="mini-list">
+                        <li>
+                            <div>
+                                <p class="label">Design hifi dashboard</p>
+                                <small>Due today • High</small>
+                            </div>
+                            <span class="status-dot high"></span>
+                        </li>
+                        <li>
+                            <div>
+                                <p class="label">QA mobile flow</p>
+                                <small>Tomorrow • Medium</small>
+                            </div>
+                            <span class="status-dot medium"></span>
+                        </li>
+                        <li>
+                            <div>
+                                <p class="label">Present roadmap</p>
+                                <small>Fri • Low</small>
+                            </div>
+                            <span class="status-dot low"></span>
+                        </li>
+                    </ul>
+                    <div class="chart sparkline" aria-hidden="true">
+                        <div class="bar" style="height: 60%"></div>
+                        <div class="bar" style="height: 90%"></div>
+                        <div class="bar" style="height: 30%"></div>
+                        <div class="bar" style="height: 70%"></div>
+                        <div class="bar" style="height: 50%"></div>
+                    </div>
+                </div>
+                <div class="floating-badge">Interactive • Live • Insightful</div>
+            </div>
+        </section>
+
+        <section class="grid features">
+            <article class="feature-card">
+                <h3>Apple-grade polish</h3>
+                <p>Glassmorphism cards, super-soft shadows, spacious layout, and fluid animations that mirror macOS motion curves.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Particle ambience</h3>
+                <p>Dynamic canvas particles gently orbit your hero, responding to cursor movement with subtle parallax.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Realtime intelligence</h3>
+                <p>Search, filter, drag-and-drop sorting, and live charts keep every task expressive across every page.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Confetti moments</h3>
+                <p>Celebrate completions with micro-interactions, confetti bursts, and soft notification toasts.</p>
+            </article>
+        </section>
+
+        <section class="cta">
+            <div>
+                <h2>Everything connects.</h2>
+                <p>Use the navigation to flow between creation, lists, calendar, reports, dashboard, and contact—always in sync.</p>
+            </div>
+            <a class="btn primary" href="tasklist.html">Open Task List</a>
+        </section>
+    </main>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div id="confetti"></div>
+</body>
+</html>
