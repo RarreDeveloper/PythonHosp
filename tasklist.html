@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS • Task List</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body data-page="list" class="theme-light">
+    <header class="global-header glassy">
+        <div class="brand">TMS Studio</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="addtask.html">Add Task</a>
+            <a href="tasklist.html" class="active">Task List</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="reports.html">Reports</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-button" id="notifyButton" aria-label="Notifications">
+                <span class="icon-bell"></span>
+            </button>
+            <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="sun"></span>
+                <span class="moon"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="panel">
+            <div class="panel-header">
+                <div>
+                    <p class="eyebrow">Organize</p>
+                    <h1>Task List</h1>
+                </div>
+                <div class="filters">
+                    <input type="search" id="searchTasks" placeholder="Search tasks...">
+                    <select id="filterPriority">
+                        <option value="all">All priorities</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                    <label class="toggle-control inline">
+                        <input type="checkbox" id="showCompleted" checked>
+                        <span>Show completed</span>
+                    </label>
+                </div>
+            </div>
+            <div class="kanban" id="taskBoard">
+                <div class="column" data-status="pending">
+                    <div class="column-header">Pending</div>
+                    <div class="dropzone" id="pendingZone"></div>
+                </div>
+                <div class="column" data-status="completed">
+                    <div class="column-header">Completed</div>
+                    <div class="dropzone" id="completedZone"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div id="confetti"></div>
+</body>
+</html>

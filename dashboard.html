@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS • Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body data-page="dashboard" class="theme-light">
+    <header class="global-header glassy">
+        <div class="brand">TMS Studio</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="addtask.html">Add Task</a>
+            <a href="tasklist.html">Task List</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="reports.html">Reports</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-button" id="notifyButton" aria-label="Notifications">
+                <span class="icon-bell"></span>
+            </button>
+            <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="sun"></span>
+                <span class="moon"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="panel">
+            <div class="panel-header">
+                <div>
+                    <p class="eyebrow">Overview</p>
+                    <h1>Dashboard</h1>
+                </div>
+                <button class="btn ghost" id="exportJson">Export JSON</button>
+            </div>
+            <div class="stats-grid" id="dashboardStats"></div>
+            <div class="grid two">
+                <div class="card list" id="upcomingList">
+                    <div class="card-header">
+                        <h3>Upcoming</h3>
+                        <span class="pill">Auto-sorted</span>
+                    </div>
+                    <ul class="mini-list"></ul>
+                </div>
+                <div class="card list" id="notificationsPanel">
+                    <div class="card-header">
+                        <h3>Notifications</h3>
+                        <span class="pill neutral">Live</span>
+                    </div>
+                    <ul class="mini-list"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div id="confetti"></div>
+</body>
+</html>

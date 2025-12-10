@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS • Add Task</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body data-page="add" class="theme-light">
+    <header class="global-header glassy">
+        <div class="brand">TMS Studio</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="addtask.html" class="active">Add Task</a>
+            <a href="tasklist.html">Task List</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="reports.html">Reports</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-button" id="notifyButton" aria-label="Notifications">
+                <span class="icon-bell"></span>
+            </button>
+            <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="sun"></span>
+                <span class="moon"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page narrow">
+        <section class="panel">
+            <div class="panel-header">
+                <div>
+                    <p class="eyebrow">Create task</p>
+                    <h1>Add Task</h1>
+                </div>
+                <div class="loading" id="formLoader" aria-hidden="true"></div>
+            </div>
+            <form id="taskForm" class="form-grid" novalidate>
+                <label class="field">
+                    <span>Task Title</span>
+                    <input type="text" name="title" required placeholder="Design sprint review" autofocus>
+                    <small class="error">Title is required.</small>
+                </label>
+                <label class="field">
+                    <span>Description</span>
+                    <textarea name="description" rows="3" placeholder="Outline goals, stakeholders, and milestones."></textarea>
+                </label>
+                <div class="field inline">
+                    <label>
+                        <span>Due Date</span>
+                        <input type="date" name="due" required>
+                        <small class="error">Set a due date.</small>
+                    </label>
+                    <label>
+                        <span>Priority</span>
+                        <select name="priority" required>
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="field inline">
+                    <label class="toggle-control">
+                        <input type="checkbox" name="notify" checked>
+                        <span>Enable reminders</span>
+                    </label>
+                    <label class="toggle-control">
+                        <input type="checkbox" name="pin">
+                        <span>Pin task</span>
+                    </label>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Add Task</button>
+                    <button type="reset" class="btn ghost">Reset</button>
+                </div>
+            </form>
+            <div class="note">Tasks are stored locally on your device. Navigate to Task List or Dashboard to see them in action.</div>
+        </section>
+    </main>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div id="confetti"></div>
+</body>
+</html>

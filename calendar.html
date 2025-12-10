@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS • Calendar</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body data-page="calendar" class="theme-light">
+    <header class="global-header glassy">
+        <div class="brand">TMS Studio</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="addtask.html">Add Task</a>
+            <a href="tasklist.html">Task List</a>
+            <a href="calendar.html" class="active">Calendar</a>
+            <a href="reports.html">Reports</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-button" id="notifyButton" aria-label="Notifications">
+                <span class="icon-bell"></span>
+            </button>
+            <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="sun"></span>
+                <span class="moon"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="panel calendar-panel">
+            <div class="panel-header">
+                <div>
+                    <p class="eyebrow">Month view</p>
+                    <h1>Calendar</h1>
+                </div>
+                <div class="calendar-controls">
+                    <button class="icon-button" id="prevMonth" aria-label="Previous month">◀</button>
+                    <div id="monthLabel" class="month-label"></div>
+                    <button class="icon-button" id="nextMonth" aria-label="Next month">▶</button>
+                </div>
+            </div>
+            <div class="calendar-grid" id="calendarGrid"></div>
+        </section>
+    </main>
+
+    <div id="eventDetail" class="popover" role="dialog" aria-modal="true" hidden>
+        <div class="popover-content">
+            <button class="icon-button close" id="closeEvent">✕</button>
+            <div class="popover-body"></div>
+        </div>
+    </div>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div id="confetti"></div>
+</body>
+</html>
